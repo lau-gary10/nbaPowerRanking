@@ -1,5 +1,5 @@
 '''
-The main file to run
+Opens the excel worksheet that contains the saved file
 
 #########################################################################
 The MIT License (MIT)
@@ -25,38 +25,38 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 #########################################################################
 '''
-
 import common_lib
 
 def start_main():
-    # Modules that only need to run once, and are not updated daily (ex: height)
-    def run_once():
-        return
-    # Modules that run multiple times, and are updated daily.
-    def run_multiple_times():
-        common_lib.call_another_module('get_html_data.py')
-        common_lib.call_another_module('parse_html_file.py')
-        common_lib.call_another_module('evaluate_true_power_ranking.py')
-        common_lib.call_another_module('evaluate_gap.py')
-        common_lib.call_another_module('open_excel_instance.py')
+    from sys import argv
+    filePathName = common_lib.NBA_POWER_RANKING_CSV_FILE
 
-    run_once()
-    run_multiple_times()
+    from win32com.client import Dispatch
+    xl = Dispatch('Excel.Application')
+    wb = xl.Workbooks.Open(filePathName)
+    xl.Visible = True # optional: if you want to see the spreadsheet
 
-# Get run time of the parameter module
+# Get module name
+def module_name():
+    from sys import argv
+    from os import path
+    filename= argv[0]
+    name = path.splitext(path.basename(filename))[0]
+    return name
+
+# Prints the run time of this program
 def actual_run_time():
-    def new_func():
+    def new_function():
         start_main()
+        return
     from timeit import timeit
-    seconds = timeit(new_func, number=1)
+    numSec = timeit(new_function, number=1)
     from datetime import timedelta
-    seconds = timedelta(seconds=float(seconds))
-
-    name = common_lib.module_name() + '.py'
+    seconds = timedelta(seconds=float(numSec))
+    name = module_name() + '.py'
     print('Actual run time on ' + name + ':', seconds)
 
 def main():
     actual_run_time()
 
-if __name__ == '__main__':
-    main()
+main()
