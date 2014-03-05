@@ -1,17 +1,24 @@
 '''
 Find the gap between each team and put them on a tier
 
-If the true_pct gap between teams are 5% or greater, than the lesser team belongs on a lesser
+If the true_pct gap between teams are 4.5% or greater, than the lesser team belongs on a lesser
 tier.
 
 Explanation of tiers:
-    Tier A - Title Contenders. Teams that are capable of winning the championship.
-    Tier B - Playoff Contenders. Teams that are capable of making it into the playoffs. They are
-        the dark horses to get the championship.
-    Tier C and D - Playoff Strugglers. Teams that will struggle getting into the playoffs. Very
-             unlikely to win the championship.
-    Tier E and below - See-You-Next-Year. Teams that are tanking, or just does not have any
-            potential to reach the playoffs.
+    Tier A - Title Contender. Teams that are fully capable of winning the championship.
+        Projection: Conference Finals - League Finals
+    Tier B - Playoff Contender. Teams that are fully capable of getting into the playoffs.
+            Possibly Title Contender.
+        Projection: 2nd Round - League Finals
+    Tier C and D - Playoff Runner. Teams that can get into the playoffs. Unlikely to contend
+            for a title.
+        Projection: 1st Round - Conference Finals
+    Tier E and F - Playoff Struggler. Teams that will struggle to get into playoffs. Highly
+            unlikely to contend for a title.
+        Projection: 10th Conference Place - 2nd Round
+    Tier G and below - Yawner. Teams that are tanking, or just do not have any
+            potential to reach the playoffs. Unlikely to pay tickets to see these teams.
+        Projection: Lottery Picks
 
 #########################################################################
 The MIT License (MIT)
@@ -39,7 +46,25 @@ SOFTWARE.
 '''
 
 import common_lib
-PCT_GAP_CUTOFF = .05
+PCT_GAP_CUTOFF = .045
+
+# Assigns a label to the letter
+def assign_label_to_tier(letter):
+    if 'A' == letter:
+        label = 'Title Contender'
+    elif 'B' == letter:
+        label = 'Playoff Contender'
+    elif 'C' == letter:
+        label = 'Playoff Runner'
+    elif 'D' == letter:
+        label = 'Playoff Runner'
+    elif 'E' == letter:
+        label = 'Playoff Struggler'
+    elif 'F' == letter:
+        label = 'Playoff Struggler'
+    else:
+        label = 'Yawner'
+    return label
 
 def start_main():
     list2 = []
@@ -56,22 +81,25 @@ def start_main():
         truePct = common_lib.parse_the_popped_element_to_return_str(theList.pop())
         list2.append([teamName, roadWin, homeLoss, pct, truePct])
 
-    # Add column 'PCT_GAP' and 'TIER' onto header
+    # Add column 'PCT_GAP', 'TIER', and 'LABEL' onto header
     list2.reverse()
     header = list2.pop()
     header.append('PCT_GAP')
     header.append('TIER')
+    header.append('LABEL')
     finalList.append(header)
 
-    # Evaluates team's TRUE_PCT to find PCT_GAP and TIER
+# Evaluates team's TRUE_PCT to find PCT_GAP, TIER, and LABEL
 
     # Set initial values up for looping
     length = len(list2)
     tier = 0
     letterTier = chr(tier + ord('A')) # Converts the int to corresponding english alphabet
+    label = assign_label_to_tier(letterTier)
     element1 = list2.pop()
     element1.append('0')
     element1.append(str(letterTier))
+    element1.append(str(label))
     list2.append(element1)
     for i in range(length):
 #    for i in range(0,1):
@@ -93,8 +121,12 @@ def start_main():
                 tier += 1
                 letterTier = chr(tier + ord('A'))
 
+            # Assign LABEL to corresponding TIER
+            label = assign_label_to_tier(letterTier)
+
             element2.append(str(pctGap))
             element2.append(str(letterTier))
+            element2.append(str(label))
             finalList.append(element1)
             list2.append(element2)
 
