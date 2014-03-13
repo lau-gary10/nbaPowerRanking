@@ -1,7 +1,7 @@
 '''
 Find the gap between each team and put them on a tier
 
-If the true_pct gap between teams are 4.5% or greater, than the lesser team belongs on a lesser
+If the true_pct gap between teams are 4.0% or greater, than the lesser team belongs on a lesser
 tier.
 
 Explanation of tiers:
@@ -18,7 +18,7 @@ Explanation of tiers:
         Projection: 10th Conference Place - 2nd Round
     Tier G and below - Yawner. Teams that are tanking, or just do not have any
             potential to reach the playoffs. Unlikely to pay tickets to see these teams.
-        Projection: Lottery Picks
+        Projection: Lottery Pick
 
 #########################################################################
 The MIT License (MIT)
@@ -45,32 +45,41 @@ SOFTWARE.
 #########################################################################
 '''
 
-import common_lib
-PCT_GAP_CUTOFF = .045
+import common_lib, sys
 
-# Assigns a label to the letter
-def assign_label_to_tier(letter):
+NBA_POWER_RANKING_CSV_FILE = sys.argv[1]
+PCT_GAP_CUTOFF = .040
+
+# Assigns a label and projection to the letter
+def assign_label_and_projection_to_tier(letter):
     if 'A' == letter:
         label = 'Title Contender'
+        projection = 'Conference Finals - League Finals'
     elif 'B' == letter:
         label = 'Playoff Contender'
+        projection = '2nd Round - League Finals'
     elif 'C' == letter:
         label = 'Playoff Runner'
+        projection = '1st Round - Conference Finals'
     elif 'D' == letter:
         label = 'Playoff Runner'
+        projection = '1st Round - Conference Finals'
     elif 'E' == letter:
         label = 'Playoff Struggler'
+        projection = '10th Place - 2nd Round'
     elif 'F' == letter:
         label = 'Playoff Struggler'
+        projection = '10th Place - 2nd Round'
     else:
         label = 'Yawner'
-    return label
+        projection = 'Lottery Pick'
+    return label, projection
 
 def start_main():
     list2 = []
     finalList = []
 
-    theList = common_lib.get_multiple_col(common_lib.NBA_POWER_RANKING_CSV_FILE, 0,1,2,3,4)
+    theList = common_lib.get_multiple_col(NBA_POWER_RANKING_CSV_FILE, 0,1,2,3,4)
 
     i = 0
     while i < len(theList):
@@ -87,6 +96,7 @@ def start_main():
     header.append('PCT_GAP')
     header.append('TIER')
     header.append('LABEL')
+    header.append('PROJECTION')
     finalList.append(header)
 
 # Evaluates team's TRUE_PCT to find PCT_GAP, TIER, and LABEL
@@ -95,11 +105,12 @@ def start_main():
     length = len(list2)
     tier = 0
     letterTier = chr(tier + ord('A')) # Converts the int to corresponding english alphabet
-    label = assign_label_to_tier(letterTier)
+    labelProjeTuple = assign_label_and_projection_to_tier(letterTier)
     element1 = list2.pop()
     element1.append('0')
     element1.append(str(letterTier))
-    element1.append(str(label))
+    element1.append(str(labelProjeTuple[0]))
+    element1.append(str(labelProjeTuple[1]))
     list2.append(element1)
     for i in range(length):
 #    for i in range(0,1):
@@ -122,16 +133,17 @@ def start_main():
                 letterTier = chr(tier + ord('A'))
 
             # Assign LABEL to corresponding TIER
-            label = assign_label_to_tier(letterTier)
+            labelProjeTuple = assign_label_and_projection_to_tier(letterTier)
 
             element2.append(str(pctGap))
             element2.append(str(letterTier))
-            element2.append(str(label))
+            element2.append(str(labelProjeTuple[0]))
+            element2.append(str(labelProjeTuple[1]))
             finalList.append(element1)
             list2.append(element2)
 
     finalList = common_lib.convert_list_into_str(finalList)
-    common_lib.write_file(finalList, common_lib.NBA_POWER_RANKING_CSV_FILE)
+    common_lib.write_file(finalList, NBA_POWER_RANKING_CSV_FILE)
 
 # Get run time of the parameter module
 def actual_run_time():

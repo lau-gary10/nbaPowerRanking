@@ -29,19 +29,51 @@ SOFTWARE.
 import common_lib
 
 def start_main():
-    # Modules that only need to run once, and are not updated daily (ex: height)
-    def run_once():
-        return
-    # Modules that run multiple times, and are updated daily.
-    def run_multiple_times():
-        common_lib.call_another_module('get_html_data.py')
-        common_lib.call_another_module('parse_html_file.py')
-        common_lib.call_another_module('evaluate_true_power_ranking.py')
-        common_lib.call_another_module('evaluate_gap.py')
-        common_lib.call_another_module('open_excel_instance.py')
 
-    run_once()
-    run_multiple_times()
+    # Modules to run if you want to get the current true power ranking
+    def run_to_get_current_power_ranking():
+        common_lib.call_another_module('get_html_data.py' + NBA_STANDINGS_URL + NBA_CHAMPION_URL)
+        common_lib.call_another_module('parse_html_file.py')
+        common_lib.call_another_module('evaluate_true_power_ranking.py' + NBA_POWER_RANKING_CSV_FILE)
+        common_lib.call_another_module('evaluate_gap.py' + NBA_POWER_RANKING_CSV_FILE)
+        common_lib.call_another_module('open_excel_instance.py' + NBA_POWER_RANKING_CSV_FILE)
+
+    # Modules that run to get true power ranking
+    def run_to_get_history_of_finals_teams_in_relation_to_true_power_rank():
+        common_lib.call_another_module('get_html_data.py' + NBA_STANDINGS_URL + NBA_CHAMPION_URL)
+        common_lib.call_another_module('parse_html_file.py')
+        common_lib.call_another_module('evaluate_true_power_ranking.py' + NBA_POWER_RANKING_CSV_FILE)
+        common_lib.call_another_module('evaluate_gap.py' + NBA_POWER_RANKING_CSV_FILE)
+        common_lib.call_another_module('evaluate_true_power_ranking_with_champion.py' + NBA_POWER_RANKING_CSV_FILE + YEAR)
+
+    flag = False
+    START_YEAR = 1950
+    END_YEAR = 2014
+    LAST_MAX = END_YEAR + 1
+
+################################
+# Use these variables to get the specific year of nba standings.
+#   Otherwise, comment them out:
+    flag = True
+    FLAG_YEAR = 2014
+################################
+
+    if flag == False:
+        for i in range(START_YEAR, LAST_MAX):
+            year = str(i)
+            NBA_STANDINGS_URL = ' ' + 'http://www.basketball-reference.com/leagues/NBA_' + year + '_standings.html'
+            NBA_CHAMPION_URL = ' ' + 'http://www.basketball-reference.com/leagues/NBA_' + year + '.html'
+            NBA_POWER_RANKING_CSV_FILE = ' ' + common_lib.NBA_STANDING_DIR + 'nbaPowerRanking' + year + '.csv'
+            YEAR = ' ' + year
+            run_to_get_history_of_finals_teams_in_relation_to_true_power_rank()
+            from time import sleep
+            sleep(3)
+    else:
+        FLAG_YEAR = str(FLAG_YEAR)
+        NBA_STANDINGS_URL = ' ' + 'http://www.basketball-reference.com/leagues/NBA_' + FLAG_YEAR + '_standings.html'
+        NBA_CHAMPION_URL = ' ' + 'http://www.basketball-reference.com/leagues/NBA_' + FLAG_YEAR + '.html'
+        NBA_POWER_RANKING_CSV_FILE = ' ' + common_lib.NBA_STANDING_DIR + 'nbaPowerRanking' + FLAG_YEAR + '.csv'
+        run_to_get_current_power_ranking()
 
 # Get run time of the parameter module
 def actual_run_time():

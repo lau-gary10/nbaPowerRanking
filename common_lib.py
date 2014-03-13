@@ -25,13 +25,15 @@ SOFTWARE.
 '''
 
 
-NBA_STANDINGS_URL = 'http://www.nba.com/standings/team_record_comparison/conferenceNew_Std_Div.html?ls=iref:nba:gnav'
+#NBA_STANDINGS_URL = 'http://www.nba.com/standings/team_record_comparison/conferenceNew_Std_Div.html?ls=iref:nba:gnav'
 
 NBA_STANDING_DIR = 'C:/Users/glau/Downloads/nbaStanding/'
 
 NBA_STANDING_HTML_FILE = NBA_STANDING_DIR + 'nbaStandings.html'
+NBA_CHAMPION_HTML_FILE = NBA_STANDING_DIR + 'nbaChampion.html'
+
 NBA_STANDING_CSV_FILE = NBA_STANDING_DIR + 'nbaStandings.csv'
-NBA_POWER_RANKING_CSV_FILE = NBA_STANDING_DIR + 'nbaPowerRanking.csv'
+NBA_LEADING_TEAM_CHAMPION_CHECK_CSV_FILE = NBA_STANDING_DIR + 'nbaLeadingChampionCheck.csv'
 
 # Download data from the web and return the data as str
 def get_data_from_web(urlStr):
@@ -74,10 +76,20 @@ def write_file(dataStr, filename):
     target.write(dataStr)
     target.close
 
+# Append a file
+def append_file(dataStr, filename):
+    # Append dataStr to a file
+    target = open(filename, 'a')
+    target.write(dataStr)
+    target.close
+
 # Open downloaded file and read file into string
 def open_file(filename):
-    with open(filename) as myfile:
-        data = myfile.read()
+    try:
+        with open(filename) as myfile:
+            data = myfile.read()
+    except FileNotFoundError:
+        return 'FileNotFoundError'
     return data
 
 # Converts list into dataStr to write to csv
@@ -109,15 +121,6 @@ def parse_the_popped_element_to_return_str(element):
     element = element.replace(']', '')
     element = element.replace("'", "")
     return element
-
-# Converts list into dataStr to write to csv
-def convert_list_into_str(theList):
-    # rows contains the list of lists
-    lines = []
-    for row in theList:
-        lines.append(','.join(map(str, row)))
-        dataStr = '\n'.join(lines)
-    return dataStr
 
 # Calls another module
 def call_another_module(strOfModName):

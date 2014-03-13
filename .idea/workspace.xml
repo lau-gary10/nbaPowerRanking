@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="54" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+            <state line="33" column="39" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.41196582" vertical-offset="320" max-vertical-offset="1683">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="open_excel_instance.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/open_excel_instance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="38" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+            <state line="30" column="0" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="1173">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="common_lib.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common_lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="60" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2482">
+            <state line="35" column="40" selection-start="1602" selection-end="1642" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2533">
               <folding />
             </state>
           </provider>
@@ -53,16 +53,16 @@
       <file leaf-file-name="evaluate_true_power_ranking.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/evaluate_true_power_ranking.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="73" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
+            <state line="32" column="22" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0" vertical-offset="1528" max-vertical-offset="2295">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluate_gap.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="evaluate_gap.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/evaluate_gap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="24" selection-start="4008" selection-end="4008" vertical-scroll-proportion="2.805" vertical-offset="0" max-vertical-offset="2669">
+            <state line="50" column="0" selection-start="2355" selection-end="2355" vertical-scroll-proportion="0.0" vertical-offset="633" max-vertical-offset="2873">
               <folding />
             </state>
           </provider>
@@ -71,7 +71,7 @@
       <file leaf-file-name="get_html_data.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_html_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="5" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="918">
+            <state line="38" column="65" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
@@ -80,7 +80,16 @@
       <file leaf-file-name="parse_html_file.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parse_html_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="25" selection-start="4388" selection-end="4388" vertical-scroll-proportion="0.0" vertical-offset="2309" max-vertical-offset="3366">
+            <state line="256" column="0" selection-start="7650" selection-end="7650" vertical-scroll-proportion="0.0" vertical-offset="3950" max-vertical-offset="4760">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="evaluate_true_power_ranking_with_champion.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/evaluate_true_power_ranking_with_champion.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="13" selection-start="2058" selection-end="2058" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="2363">
               <folding />
             </state>
           </provider>
@@ -97,19 +106,20 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/common_lib.py" />
-        <option value="$PROJECT_DIR$/evaluate_true_power_ranking.py" />
-        <option value="$PROJECT_DIR$/get_html_data.py" />
         <option value="$PROJECT_DIR$/parse_html_file.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/open_excel_instance.py" />
+        <option value="$PROJECT_DIR$/get_html_data.py" />
+        <option value="$PROJECT_DIR$/evaluate_true_power_ranking.py" />
         <option value="$PROJECT_DIR$/evaluate_gap.py" />
+        <option value="$PROJECT_DIR$/common_lib.py" />
+        <option value="$PROJECT_DIR$/open_excel_instance.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/evaluate_true_power_ranking_with_champion.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-3" />
-    <option name="width" value="1034" />
+    <option name="width" value="1033" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -126,7 +136,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -137,29 +147,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nbaPowerRanking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nbaPowerRanking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nbaPowerRanking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -175,7 +163,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.evaluate_gap">
+  <component name="RunManager" selected="Python.main">
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -189,42 +177,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="nbaPowerRanking" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="nbaPowerRanking" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="evaluate_true_power_ranking" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="nbaPowerRanking" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluate_true_power_ranking.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -248,7 +200,7 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="open_excel_instance" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="get_html_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -260,7 +212,43 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="nbaPowerRanking" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/open_excel_instance.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_html_data.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="evaluate_true_power_ranking_with_champion" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="nbaPowerRanking" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluate_true_power_ranking_with_champion.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="common_lib" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="nbaPowerRanking" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common_lib.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -389,18 +377,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.evaluate_true_power_ranking" />
-      <item index="3" class="java.lang.String" itemvalue="Python.evaluate_gap" />
-      <item index="4" class="java.lang.String" itemvalue="Python.open_excel_instance" />
+      <item index="1" class="java.lang.String" itemvalue="Python.evaluate_gap" />
+      <item index="2" class="java.lang.String" itemvalue="Python.get_html_data" />
+      <item index="3" class="java.lang.String" itemvalue="Python.evaluate_true_power_ranking_with_champion" />
+      <item index="4" class="java.lang.String" itemvalue="Python.common_lib" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.evaluate_gap" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main" />
-        <item index="2" class="java.lang.String" itemvalue="Python.open_excel_instance" />
-        <item index="3" class="java.lang.String" itemvalue="Python.evaluate_true_power_ranking" />
-        <item index="4" class="java.lang.String" itemvalue="Python.test" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.common_lib" />
+        <item index="2" class="java.lang.String" itemvalue="Python.evaluate_true_power_ranking_with_champion" />
+        <item index="3" class="java.lang.String" itemvalue="Python.get_html_data" />
+        <item index="4" class="java.lang.String" itemvalue="Python.evaluate_gap" />
       </list>
     </recent_temporary>
   </component>
@@ -431,23 +419,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="0" width="1034" height="1080" extended-state="0" />
+    <frame x="-3" y="0" width="1033" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24975124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24875621" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24900399" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24900399" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5004975" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32883817" sideWeight="0.49950248" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952183" sideWeight="0.49950248" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -470,20 +458,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/open_excel_instance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common_lib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="60" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2482">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/evaluate_true_power_ranking.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="73" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="2227">
@@ -778,51 +752,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_html_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="5" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parse_html_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="25" selection-start="4388" selection-end="4388" vertical-scroll-proportion="0.0" vertical-offset="2309" max-vertical-offset="3366">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/open_excel_instance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="38" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common_lib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="60" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="2482">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluate_true_power_ranking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="73" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2227">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="54" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+        <state line="256" column="0" selection-start="7650" selection-end="7650" vertical-scroll-proportion="0.0" vertical-offset="3950" max-vertical-offset="4760">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/evaluate_gap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="24" selection-start="4008" selection-end="4008" vertical-scroll-proportion="2.805" vertical-offset="0" max-vertical-offset="2669">
+        <state line="50" column="0" selection-start="2355" selection-end="2355" vertical-scroll-proportion="0.0" vertical-offset="633" max-vertical-offset="2873">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_html_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="65" selection-start="1662" selection-end="1662" vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluate_true_power_ranking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="22" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0" vertical-offset="1528" max-vertical-offset="2295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/open_excel_instance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="40" selection-start="1602" selection-end="1642" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-1571908645/nt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="397" column="4" selection-start="12105" selection-end="12105" vertical-scroll-proportion="0.33333334" vertical-offset="6554" max-vertical-offset="18105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluate_true_power_ranking_with_champion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="13" selection-start="2058" selection-end="2058" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="2363">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="39" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.41196582" vertical-offset="320" max-vertical-offset="1683">
           <folding />
         </state>
       </provider>

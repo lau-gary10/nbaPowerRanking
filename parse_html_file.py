@@ -29,7 +29,11 @@ SOFTWARE.
 import common_lib
 
 class list_of_team_stats():
-    listOfTeamStats = [['TEAM_NAME', 'WIN', 'LOSS', 'PCT', 'GAMES_BACK', 'CONFERENCE_WIN', 'CONFERENCE_LOSS', 'DIVISION_WIN', 'DIVISION_LOSS', 'HOME_WIN', 'HOME_LOSS', 'ROAD_WIN', 'ROAD_LOSS', 'LAST_10_WIN', 'LAST_10_LOSS', 'STREAK']]
+    listOfTeamStats = [['TEAM_NAME', 'WIN', 'LOSS', 'PCT', 'ROAD_WIN', 'HOME_LOSS']]
+
+##############################
+#class list_of_team_stats():
+ #   listOfTeamStats = [['TEAM_NAME', 'WIN', 'LOSS', 'PCT', 'GAMES_BACK', 'CONFERENCE_WIN', 'CONFERENCE_LOSS', 'DIVISION_WIN', 'DIVISION_LOSS', 'HOME_WIN', 'HOME_LOSS', 'ROAD_WIN', 'ROAD_LOSS', 'LAST_10_WIN', 'LAST_10_LOSS', 'STREAK']]
 
 def parse_td(data):
     startPos = data.find('<td>')
@@ -167,11 +171,89 @@ def parse_html_file(data):
     # Append data to list
     list_of_team_stats.listOfTeamStats.append([teamName, win, loss, pct, gamesBack, confWin, confLoss, diviWin, diviLoss, homeWin, homeLoss, roadWin, roadLoss, lastTenWin, lastTenLoss, streak])
     return data
+##############################
+
+# Cut off all other data except for the expanded standings
+def get_all_expanded_standings(data):
+    startPos = data.find('id="all_expanded-standings"')
+    endPos = data.find('id="all_team-vs-team"')
+    data = data[startPos:endPos]
+    return data
+
+def transitioning_through_parsing(data, endPos):
+    startPos = endPos
+    endPos = data.__len__()
+    data = data[startPos:endPos]
+    startPos = data.find('<td align="')
+    endPos = data.__len__()
+    data = data[startPos:endPos]
+    return data
+
+# Get the values from html file and append it to existing list
+def parse_data_get_true_pct(data):
+    startPos = data.find('<a href="/teams/')
+    endPos = data.__len__()
+    data = data[startPos:endPos]
+
+    # Get TEAM_NAME
+    startPos = data.find('>')
+    endPos = data.find('</a>')
+    teamName = data[startPos:endPos]
+    teamName = teamName.replace('>', '')
+    data = transitioning_through_parsing(data, endPos)
+
+    # Get WIN and LOSS
+    startPos = data.find('>')
+    endPos = data.find('</td>')
+    loss = data[startPos:endPos]
+    loss = loss.replace('>', '')
+    startPosA = 0
+    endPosA = loss.find('-')
+    win = loss[startPosA:endPosA]
+    startPosA = endPosA
+    endPosA = loss.__len__()
+    loss = loss[startPosA:endPosA]
+    loss = loss.replace('-','')
+    data = transitioning_through_parsing(data, endPos)
+
+    # Get PCT
+    pct = float(win) / ( float(win) + float(loss) )
+    pct = str(pct)
+
+    # Get HOME_LOSS
+    startPos = data.find('>')
+    endPos = data.find('</td>')
+    homeLoss = data[startPos:endPos]
+    startPosA = homeLoss.find('-')
+    endPosA = homeLoss.__len__()
+    homeLoss = homeLoss[startPosA:endPosA]
+    homeLoss = homeLoss.replace('-', '')
+    data = transitioning_through_parsing(data, endPos)
+
+    # Get ROAD_WIN
+    startPos = data.find('>')
+    endPos = data.find('</td>')
+    roadWin = data[startPos:endPos]
+    startPosA = 0
+    endPosA = roadWin.find('-')
+    roadWin = roadWin[startPosA:endPosA]
+    roadWin = roadWin.replace('>', '')
+
+    # Append data to list
+    list_of_team_stats.listOfTeamStats.append([teamName, win, loss, pct, roadWin, homeLoss])
+    return data
 
 def start_main():
     data = common_lib.open_file(common_lib.NBA_STANDING_HTML_FILE)
-    while data.find('<td class="team">') > 0:
-        data = parse_html_file(data)
+    data = get_all_expanded_standings(data)
+
+    while data.find('<a href="/teams/') > 0:
+        data = parse_data_get_true_pct(data)
+
+#########################
+#    while data.find('<td class="team">') > 0:
+ #       data = parse_html_file(data)
+#########################
 
     thisList = common_lib.convert_list_into_str(list_of_team_stats.listOfTeamStats)
     common_lib.write_file(thisList, common_lib.NBA_STANDING_CSV_FILE)

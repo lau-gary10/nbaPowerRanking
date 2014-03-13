@@ -25,11 +25,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 #########################################################################
 '''
-import common_lib
+import common_lib, sys
+
+NBA_POWER_RANKING_CSV_FILE = sys.argv[1]
 
 def start_main():
     from sys import argv
-    filePathName = common_lib.NBA_POWER_RANKING_CSV_FILE
+    filePathName = NBA_POWER_RANKING_CSV_FILE
 
     from win32com.client import Dispatch
     xl = Dispatch('Excel.Application')

@@ -26,11 +26,17 @@ SOFTWARE.
 #########################################################################
 '''
 
-import common_lib
+import common_lib, sys
+NBA_STANDINGS_URL = sys.argv[1]
+NBA_CHAMPION_URL = sys.argv[2]
 
 def start_main():
-    data = common_lib.get_data_from_web(common_lib.NBA_STANDINGS_URL)
+    data = common_lib.get_data_from_web(NBA_STANDINGS_URL)
     common_lib.write_binary_file(data, common_lib.NBA_STANDING_HTML_FILE)
+    from time import sleep
+    sleep(3)
+    data = common_lib.get_data_from_web(NBA_CHAMPION_URL)
+    common_lib.write_binary_file(data, common_lib.NBA_CHAMPION_HTML_FILE)
 
 # Prints the run time of this program
 def actual_run_time():

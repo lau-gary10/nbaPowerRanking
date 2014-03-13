@@ -26,7 +26,9 @@ SOFTWARE.
 #########################################################################
 '''
 
-import common_lib
+import common_lib, sys
+
+NBA_POWER_RANKING_CSV_FILE = sys.argv[1]
 
 class globalListClass:
     globalListVar = []
@@ -36,8 +38,10 @@ def sort_true_pct_ranking():
     list2 = []
 
     # Get values and append the file
-    thisList = common_lib.get_multiple_col(common_lib.NBA_STANDING_CSV_FILE, 0, 10, 11, 3)
-
+    thisList = common_lib.get_multiple_col(common_lib.NBA_STANDING_CSV_FILE, 0, 5, 4, 3)
+#######################################
+#    thisList = common_lib.get_multiple_col(common_lib.NBA_STANDING_CSV_FILE, 0, 10, 11, 3)
+#######################################
     teamName = thisList.pop()
     teamName = common_lib.parse_the_popped_element_to_return_str(teamName)
     homeLoss = thisList.pop()
@@ -107,7 +111,7 @@ def start_main():
     tmpList = sort_true_pct_ranking()
 
     tmpList = common_lib.convert_list_into_str(tmpList)
-    common_lib.write_file(tmpList, common_lib.NBA_POWER_RANKING_CSV_FILE)
+    common_lib.write_file(tmpList, NBA_POWER_RANKING_CSV_FILE)
 
 # Prints the run time of this program
 def actual_run_time():
