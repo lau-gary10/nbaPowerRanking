@@ -36,7 +36,7 @@ def start_main():
         common_lib.call_another_module('parse_html_file.py')
         common_lib.call_another_module('evaluate_true_power_ranking.py' + NBA_POWER_RANKING_CSV_FILE)
         common_lib.call_another_module('evaluate_gap.py' + NBA_POWER_RANKING_CSV_FILE)
-        common_lib.call_another_module('open_excel_instance.py' + NBA_POWER_RANKING_CSV_FILE)
+#        common_lib.call_another_module('open_excel_instance.py' + NBA_POWER_RANKING_CSV_FILE)
 
     # Modules that run to get true power ranking
     def run_to_get_history_of_finals_teams_in_relation_to_true_power_rank():
